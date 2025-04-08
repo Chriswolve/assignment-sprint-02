@@ -69,6 +69,12 @@ def get_feature_target(
     """
     X_train, y_train, X_test, y_test = None, None, None, None
 
+
+    X_train = app_train.drop(columns=["TARGET"], axis=1)
+    y_train = app_train["TARGET"]
+    X_test = app_test.drop(columns=["TARGET"], axis=1)
+    y_test = app_test["TARGET"]
+
     # TODO
     # Assign to X_train all the columns from app_train except "TARGET"
     # Assign to y_train the "TARGET" column
