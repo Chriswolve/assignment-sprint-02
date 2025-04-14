@@ -6,7 +6,6 @@ from pytest import fixture
 from src import config
 from src.data_utils import get_datasets
 
-
 @fixture(scope="session", autouse=True)
 def app_train() -> pd.DataFrame:
     """Load and return train dataset."""
